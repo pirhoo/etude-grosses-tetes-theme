@@ -9,3 +9,6 @@ deploy-git:
 
 deploy-dist:
 	echo "put -r dist" | sftp 2829886@sftp.sd5.gpaas.net:/vhosts/next.ajlgbt.info/htdocs/wp-content/themes/etude-grosses-tetes/
+
+deploy-vendor:
+	echo "put -r vendor" | sftp 2829886@sftp.sd5.gpaas.net:/vhosts/next.ajlgbt.info/htdocs/wp-content/themes/etude-grosses-tetes/
