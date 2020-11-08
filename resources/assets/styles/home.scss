@@ -1,0 +1,116 @@
+.home {
+
+  &__jumbotron {
+    border-top: currentColor solid 2px;
+    min-height: 80vh;
+    background: $primary;
+    color: #fff;
+
+    &__punchline {
+      text-align: right;
+    }
+
+    &__link {
+      padding: 0;
+      height: 70%;
+      background: #fff;
+      display: flex;
+      position: relative;
+
+      &, &:hover {
+        text-decoration: none;
+      }
+
+      &:after {
+        content: "un visuel ici car les gens aiment les visuels";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        font-variant: small-caps;
+        opacity: 0.5;
+        font-style: italic;
+      }
+
+      &__button {
+        font-family: $headings-font-family;
+        font-weight: bold;
+        align-self: end;
+      }
+    }
+  }
+
+  &__ajl {
+    min-height: 60vh;
+
+    &__button {
+      font-family: $headings-font-family;
+      font-weight: bold;
+    }
+
+    &__link {
+
+      &__logo {
+        max-width: 250px;
+      }
+    }
+  }
+
+  &__chapters {
+    padding: $spacer-lg 0;
+
+    &__panel {
+      padding: $spacer-lg 0;
+      border-top: 2px currentColor solid;
+      border-bottom: 2px currentColor solid;
+
+      &__list {
+
+        &__item {
+          padding: $spacer-lg 0;
+          border-bottom: 2px currentColor solid;
+
+          &:first-of-type {
+            padding-top: 0;
+          }
+
+          &:last-of-type {
+            border-bottom: 0;
+            padding-bottom: 0;
+          }
+
+          &__excerpt {
+            margin-bottom: 0;
+            font-size: italic;
+          }
+        }
+      }
+    }
+  }
+
+  &__methodology {
+    padding: $spacer-lg 0;
+
+    &__panel {
+      background: $body-color;
+      color: #fff;
+      padding: $spacer-lg $spacer;
+
+      &__figures {
+
+        &__item {
+
+          font-weight: bold;
+
+          &__display {
+            font-size: 5rem;
+            display: block;
+            font-family: $headings-font-family;
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,11 @@ use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
 /**
+ * Enable excerpt support for pages
+ */
+add_post_type_support( 'page', 'excerpt' );
+
+/**
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {

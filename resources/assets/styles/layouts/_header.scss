@@ -62,6 +62,7 @@
 
           &.menu-item-has-children {
             position: relative;
+            z-index: $zindex-dropdown;
 
             & > a:before {
               content: "";

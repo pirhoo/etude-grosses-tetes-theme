@@ -55,5 +55,10 @@
 
 
   &__content {
+    min-width: 690px;
+  }
+
+  &__sidebar {
+    padding: 0 $spacer;
   }
 }
