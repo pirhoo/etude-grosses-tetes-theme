@@ -14,14 +14,14 @@
       </div>
       <div class="col home__chapters__panel__list">
         @foreach (FrontPage::studyChapters() as $chapter)
-          <div class="home__chapters__panel__list__item">
-            <h4 class="home__chapters__panel__list__item__title">
+          <a href="{{ get_permalink($chapter) }}" class="home__chapters__panel__list__item d-block text-dark">
+            <h4 class="home__chapters__panel__list__item__title mb-0">
               {{ $chapter->post_title }}
             </h4>
             <p class="home__chapters__panel__list__item__excerpt">
               {{ $chapter->post_excerpt }}
             </p>
-          </div>
+          </a>
         @endforeach
       </div>
     </div>

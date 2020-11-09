@@ -1,0 +1,18 @@
+.next-study-chapter {
+  max-width: $page-max-width;
+  margin: 0 auto $spacer-lg;
+
+  &__heading {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  &__link {
+
+    &__arrow {
+      font-size: 40px;
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

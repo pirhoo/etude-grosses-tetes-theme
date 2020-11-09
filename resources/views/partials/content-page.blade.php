@@ -16,8 +16,10 @@
   </div>
 
   <div class="page__sidebar page__sidebar--right">
-    
+
   </div>
 </div>
+
+@include('partials/next-study-chapter')
 
 {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']) !!}

@@ -1,7 +1,7 @@
 .page {
 
   &__header, &__thumbnail, &__content {
-    max-width: 690px;
+    max-width: $page-max-width;
     margin: auto;
   }
 
@@ -55,7 +55,7 @@
 
 
   &__content {
-    min-width: 690px;
+    min-width: $page-max-width;
   }
 
   &__sidebar {
