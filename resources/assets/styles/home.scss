@@ -72,18 +72,24 @@
         margin-left: $spacer-lg;
 
         &__item {
-          padding: $spacer-sm $spacer-lg;
-          margin-bottom: $spacer-lg;
+          padding: $spacer-lg 0;
           border-bottom: 2px currentColor solid;
-          background: $gray-100;
 
           &:hover {
-            background: $body-color;
             text-decoration: none;
-
-            &, & > * {
-              color: #fff;
+            
+            * {
+              color: $primary;
             }
+          }
+
+
+          &__title {
+            display: inline-block;
+          }
+
+          &:first-of-type {
+            padding-top: 0;
           }
 
           &:last-of-type {
