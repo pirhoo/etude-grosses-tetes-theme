@@ -8,13 +8,13 @@
         <p class="lead">
           Ici une courte présentation de l'AJL et de ses actions car tout le monde ne connait pas encore l'association.
         </p>
-        <div class="home__ajl__button btn btn-dark btn-lg">
+        <a class="home__ajl__button btn btn-dark btn-lg" href="https://www.ajlgbt.info" target="_blank">
           En savoir plus
-        </div>
+        </a>
       </div>
-      <div class="col-4 home__ajl__link">
+      <a class="col-4 home__ajl__link" href="https://www.ajlgbt.info" target="_blank">
         <img src="@asset('images/ajl-black.png')" class="home__ajl__link__logo"  />
-      </div>
+      </a>
     </div>
   </div>
 </div>
