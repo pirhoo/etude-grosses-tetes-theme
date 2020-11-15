@@ -23,10 +23,10 @@
       </div>
       <div class="col home__methodology__panel__figures__item">
         <span class="home__methodology__panel__figures__item__display">
-          292
+          361
         </span>
         <span class="home__methodology__panel__figures__item__unit">
-          propos problématiques
+          épisodes problématiques
         </span>
       </div>
     </div>
