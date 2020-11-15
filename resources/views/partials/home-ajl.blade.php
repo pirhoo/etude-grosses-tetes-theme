@@ -3,7 +3,7 @@
     <div class="row align-items-center justify-content-center text-center">
       <div class="col order-1 home__ajl__punchline">
         <h1>
-          Une étude de l'Association des Journalistes LGBT+
+          Une étude de l'Association des Journalistes LGBT+&nbsp;🏳️‍🌈
         </h1>
         <p class="lead">
           Ici une courte présentation de l'AJL et de ses actions car tout le monde ne connait pas encore l'association.

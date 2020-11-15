@@ -77,12 +77,11 @@
 
           &:hover {
             text-decoration: none;
-            
+
             * {
               color: $primary;
             }
           }
-
 
           &__title {
             display: inline-block;
@@ -125,10 +124,16 @@
 
           &__display {
             line-height: 1;
-            font-size: 5rem;
+            font-size: 3rem;
             display: block;
             font-family: $headings-font-family;
             color: $primary;
+            white-space: nowrap;
+
+            &__emoji {
+              position: relative;
+              top: -0.1em;
+            }
           }
         }
       }

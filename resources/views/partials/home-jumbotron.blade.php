@@ -3,7 +3,7 @@
     <div class="row align-items-center justify-content-center">
       <div class="col-7 home__jumbotron__punchline">
         <h1>
-          Des remarques sexistes toutes les 11 minutes
+          Des remarques sexistes <span class="text-nowrap">toutes les 11 minutes 🙅</span>
         </h1>
         <p class="lead">
           C'est ce que rêvèle note dernière étude sur Les Grosses Têtes. Avec en moyenne <strong class="font-weight-bold">19 épisodes problématiques par émission</strong>, blablabla

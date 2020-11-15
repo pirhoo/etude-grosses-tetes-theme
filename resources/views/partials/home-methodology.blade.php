@@ -7,7 +7,7 @@
     <div class="row home__methodology__panel__figures text-center">
       <div class="col home__methodology__panel__figures__item">
         <span class="home__methodology__panel__figures__item__display">
-          24
+          <span class="home__methodology__panel__figures__item__display__emoji">📻</span> 24
         </span>
         <span class="home__methodology__panel__figures__item__unit">
           émissions
@@ -15,7 +15,7 @@
       </div>
       <div class="col home__methodology__panel__figures__item">
         <span class="home__methodology__panel__figures__item__display">
-          2 160
+          <span class="home__methodology__panel__figures__item__display__emoji">⏱</span>2&nbsp;160
         </span>
         <span class="home__methodology__panel__figures__item__unit">
           minutes écoutées
@@ -23,7 +23,7 @@
       </div>
       <div class="col home__methodology__panel__figures__item">
         <span class="home__methodology__panel__figures__item__display">
-          361
+          <span class="home__methodology__panel__figures__item__display__emoji">😳</span> 361
         </span>
         <span class="home__methodology__panel__figures__item__unit">
           épisodes problématiques
