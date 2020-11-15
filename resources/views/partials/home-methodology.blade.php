@@ -7,26 +7,26 @@
     <div class="row home__methodology__panel__figures text-center">
       <div class="col home__methodology__panel__figures__item">
         <span class="home__methodology__panel__figures__item__display">
-          X
+          24
         </span>
         <span class="home__methodology__panel__figures__item__unit">
-          d'emission
+          émissions
         </span>
       </div>
       <div class="col home__methodology__panel__figures__item">
         <span class="home__methodology__panel__figures__item__display">
-          Y
+          2 160
         </span>
         <span class="home__methodology__panel__figures__item__unit">
-          invité·e·s
+          minutes écoutées
         </span>
       </div>
       <div class="col home__methodology__panel__figures__item">
         <span class="home__methodology__panel__figures__item__display">
-          Z
+          292
         </span>
         <span class="home__methodology__panel__figures__item__unit">
-          débordements
+          propos problématiques
         </span>
       </div>
     </div>

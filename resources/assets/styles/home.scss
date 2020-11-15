@@ -59,6 +59,7 @@
 
   &__chapters {
     padding: $spacer-lg 0;
+    font-size: 1rem;
 
     &__panel {
       padding: $spacer-lg 0;
@@ -66,18 +67,29 @@
       border-bottom: 2px currentColor solid;
 
       &__list {
+        display: flex;
+        flex-direction: column;
+        margin-left: $spacer-lg;
 
         &__item {
-          padding: $spacer-lg 0;
+          padding: $spacer-sm $spacer-lg;
+          margin-bottom: $spacer-lg;
           border-bottom: 2px currentColor solid;
+          background: $gray-100;
 
-          &:first-of-type {
-            padding-top: 0;
+          &:hover {
+            background: $body-color;
+            text-decoration: none;
+
+            &, & > * {
+              color: #fff;
+            }
           }
 
           &:last-of-type {
+            flex-grow: 1;
             border-bottom: 0;
-            padding-bottom: 0;
+            margin-bottom: 0;
           }
 
           &__excerpt {
@@ -98,12 +110,15 @@
       padding: $spacer-lg $spacer;
 
       &__figures {
+        padding: $spacer-lg 0;
 
         &__item {
-
+          display: flex;
+          flex-direction: column;
           font-weight: bold;
 
           &__display {
+            line-height: 1;
             font-size: 5rem;
             display: block;
             font-family: $headings-font-family;
