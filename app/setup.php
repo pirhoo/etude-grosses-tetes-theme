@@ -7,10 +7,20 @@ use Roots\Sage\Assets\JsonManifest;
 use Roots\Sage\Template\Blade;
 use Roots\Sage\Template\BladeProvider;
 
+@ini_set('upload_max_size' , '64M');
+
 /**
  * Enable excerpt support for pages
  */
 add_post_type_support( 'page', 'excerpt' );
+
+
+/**
+ * Disable post in the menu
+ */
+add_action('admin_menu', function () {
+    remove_menu_page('edit.php');
+});
 
 /**
  * Theme assets

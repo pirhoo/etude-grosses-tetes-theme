@@ -1,3 +1,5 @@
+@import '~green-audio-player/dist/css/green-audio-player.min.css';
+
 .page {
 
   &__header, &__thumbnail, &__content {
@@ -56,6 +58,60 @@
 
   &__content {
     min-width: $page-max-width;
+
+    .wp-block-audio {
+      position: relative;
+      width: 100%;
+
+      &.green-audio-player {
+        border-radius: 0;
+        border: 2px solid $primary;
+        box-shadow: none;
+        color: $body-color;
+        box-shadow: $spacer $spacer 0 0 rgba($primary, 0.5);
+        margin-bottom: $spacer-xl;
+
+        audio, figcaption {
+          display: none;
+        }
+
+        .controls {
+          color: $text-muted;
+        }
+
+        .play-pause-btn__icon,
+        .volume__speaker {
+          fill: currentColor;
+        }
+
+        .volume__button.open .volume__speaker {
+          fill: $primary;
+        }
+
+        .slider {
+          background: $gray-400;
+        }
+
+        .slider .gap-progress,
+        .volume__progress .gap-progress {
+          background: $primary;
+
+          .pin {
+            background: inherit;
+          }
+        }
+
+        .volume__controls {
+          border-radius: 0;
+        }
+      }
+
+      figcaption {
+        font-size: 1rem;
+        color: $text-muted;
+        text-align: center;
+      }
+    }
   }
 
   &__sidebar {
