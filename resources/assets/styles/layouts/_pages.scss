@@ -60,6 +60,9 @@
     min-width: $page-max-width;
 
     .wp-block-audio {
+      $player-height: 100px;
+      $player-holder-icon-height: $player-height * 0.4;
+
       position: relative;
       width: 100%;
 
@@ -69,14 +72,68 @@
         box-shadow: none;
         color: $body-color;
         box-shadow: $spacer $spacer 0 0 rgba($primary, 0.5);
-        margin-bottom: $spacer-xl;
+        margin: $spacer-xl 0 $spacer-xxl;
+        height: $player-height;
+        padding-left: $player-height;
+        position: relative;
+        line-height: 1;
 
-        audio, figcaption {
+        audio {
           display: none;
+        }
+
+        figcaption {
+          position: absolute;
+          left: $player-height;
+          right: 0;
+          top: 50%;
+          font-size: 0.7em;
+          color: $text-muted;
+          text-align: center;
+          padding: 0 $spacer-sm;
+        }
+
+        .holder {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: $player-height;
+          background: $primary;
+          color: white;
+
+          .play-pause-btn, .loading {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+          }
+
+          .play-pause-btn svg, .loading__spinner {
+            height: $player-holder-icon-height;
+            width: $player-holder-icon-height;
+          }
+
+          .loading__spinner {
+            top: calc(50% - #{$player-holder-icon-height / 2});
+            left: calc(50% - #{$player-holder-icon-height / 2});
+            border-width: 4px;
+            border-color: white;
+            border-right-color: transparent;
+          }
         }
 
         .controls {
           color: $text-muted;
+        }
+
+        .controls, .volume {
+          margin-top: -2em;
         }
 
         .play-pause-btn__icon,
@@ -104,12 +161,6 @@
         .volume__controls {
           border-radius: 0;
         }
-      }
-
-      figcaption {
-        font-size: 1rem;
-        color: $text-muted;
-        text-align: center;
       }
     }
   }
