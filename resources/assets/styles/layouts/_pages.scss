@@ -132,8 +132,8 @@
           color: $text-muted;
         }
 
-        .wp-block-audio--legend .controls,
-        .wp-block-audio--legend .volume {
+        &.wp-block-audio--legend .controls,
+        &.wp-block-audio--legend .volume {
           margin-top: -2em;
         }
 
