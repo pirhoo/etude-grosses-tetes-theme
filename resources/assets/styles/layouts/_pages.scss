@@ -178,7 +178,30 @@
         }
 
         .slider {
-          background: $gray-400;
+          background: transparent;
+          height: 80px;
+
+          .controls__progress {
+            visibility: hidden;
+
+            .pin {
+              height: 100%;
+              top: 0;
+            }
+          }
+
+          & > wave {
+            position: absolute !important;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            pointer-events: none;
+
+            wave {
+              border: 0 !important;
+            }
+          }
         }
 
         .slider .gap-progress,
