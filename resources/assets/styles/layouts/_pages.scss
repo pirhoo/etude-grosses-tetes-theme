@@ -59,6 +59,37 @@
   &__content {
     min-width: $page-max-width;
 
+    .wp-block-pullquote {
+      font-style: italic;
+      font-family: $font-family-serif;
+      border: 0;
+      border-color: currentColor;
+      padding: 1.5rem 0;
+      margin: 0;
+
+      blockquote {
+        padding: 1.5rem 0;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-color: inherit;
+
+        & > p:last-of-type {
+          margin-bottom: 0;
+        }
+
+        & > cite:last-of-type {
+          margin-top: $spacer;
+          display: block;
+          color: $text-muted;
+        }
+
+        &.has-vivid-red-color {
+          color: $primary;
+        }
+      }
+
+    }
+
     .wp-block-audio {
       $player-height: 100px;
       $player-holder-icon-height: $player-height * 0.4;
