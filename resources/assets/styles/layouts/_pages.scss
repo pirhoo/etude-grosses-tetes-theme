@@ -63,7 +63,7 @@
       font-size: 0.7em;
       color: $text-muted;
       text-align: center;
-      padding: 0 $spacer-sm;      
+      padding: 0 $spacer-sm;
     }
 
     .wp-block-embed.wp-has-aspect-ratio {
@@ -136,7 +136,7 @@
         border: 2px solid $primary;
         box-shadow: none;
         color: $body-color;
-        box-shadow: $spacer $spacer 0 0 rgba($primary, 0.5);
+        box-shadow: $spacer $spacer 0 0 mix($primary, white);
         margin: $spacer-xl 0 $spacer-xxl;
         height: $player-height;
         padding-left: $player-height;

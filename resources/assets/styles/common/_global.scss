@@ -1,18 +1,44 @@
 .next-study-chapter {
-  max-width: $page-max-width;
-  margin: 0 auto $spacer-lg;
+  background: mix($primary, white);
+  border-top: 2px solid $primary;
+  margin: $spacer-xl -0.5 * $grid-gutter-width 0;
 
-  &__heading {
-    font-size: 1rem;
-    margin-bottom: 0;
-  }
+  &__container {
+    max-width: $page-max-width;
+    margin: 0 auto;
+    padding: $spacer-lg 0 $spacer-xxl;
+    position: relative;
 
-  &__link {
+    &__heading {
+      font-size: 1rem;
+      margin-bottom: 0;
+      padding-bottom: $spacer-xs;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      color: $primary;
+    }
 
-    &__arrow {
-      font-size: 40px;
-      height: 40px;
-      width: 40px;
+    &__link {
+      color: $body-color;
+
+      &:hover {
+        color: #000;
+        text-decoration: none;
+      }
+
+      &__title {
+        font-size: $h2-font-size;
+      }
+
+      &__arrow {
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+      }
     }
   }
 }
