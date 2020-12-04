@@ -20,10 +20,10 @@
     }
 
     &__link {
-      color: $body-color;
+      color: #000;
 
       &:hover {
-        color: #000;
+        color: $body-color;
         text-decoration: none;
       }
 
