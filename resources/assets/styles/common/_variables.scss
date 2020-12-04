@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Bowlby+One+SC:400,700|Open+Sans:400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Bowlby+One+SC:400,700|Roboto:400,700,900");
 
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
@@ -7,7 +7,7 @@ $primary: #e20318;
 $secondary: #fbcece;
 $dark: #212529;
 
-$font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-serif: 'Noto Serif', Georgia, "Times New Roman", Times, serif;
 $font-family-base: $font-family-sans-serif;
 $font-size-base: 1.2rem;
@@ -22,11 +22,11 @@ $border-radius-xl: 1rem;
 
 $nav-link-padding-x: 1.5rem;
 
-$h1-font-size: $font-size-base * 2;
-$h2-font-size: $font-size-base * 1.75;
-$h3-font-size: $font-size-base * 1.5;
-$h4-font-size: $font-size-base * 1.25;
-$h5-font-size: $font-size-base * 1.15;
+$h1-font-size: $font-size-base * 1.75;
+$h2-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 1.25;
+$h4-font-size: $font-size-base * 1.15;
+$h5-font-size: $font-size-base * 1.10;
 $h6-font-size: $font-size-base;
 
 $spacer: 1rem;
@@ -34,6 +34,9 @@ $spacer-xs: $spacer * 0.5;
 $spacer-sm: $spacer * 0.75;
 $spacer-lg: $spacer * 1.5;
 $spacer-xl: $spacer * 2;
-$spacer-xxl: $spacer * 3;
+$spacer-xxl: $spacer * 4;
 
-$page-max-width: 690px;
+
+$paragraph-margin-bottom: 2rem;
+
+$page-max-width: 660px;

@@ -59,6 +59,13 @@
   &__content {
     min-width: $page-max-width;
 
+    .wp-block-embed figcaption {
+      font-size: 0.7em;
+      color: $text-muted;
+      text-align: center;
+      padding: 0 $spacer-sm;      
+    }
+
     .wp-block-embed.wp-has-aspect-ratio {
 
       .wp-block-embed__wrapper {
@@ -84,7 +91,7 @@
         height: 100%;
         width: 100%;
       }
-  }
+    }
 
     .wp-block-pullquote {
       font-style: italic;
