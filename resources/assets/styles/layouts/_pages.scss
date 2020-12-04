@@ -59,6 +59,14 @@
   &__content {
     min-width: $page-max-width;
 
+    & > h2 {
+      font-weight: bolder;
+      font-size: $h3-font-size;
+      font-family: $font-family-sans-serif;
+      padding-top: $spacer-xl;
+      padding-bottom: $spacer;
+    }
+
     .wp-block-embed figcaption {
       font-size: 0.7em;
       color: $text-muted;
