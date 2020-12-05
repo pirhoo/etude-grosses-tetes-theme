@@ -2,7 +2,7 @@
   <div class="container home__methodology__panel">
     <h2 class="home__methodology__panel__heading">Chiffres clés et méthodologie</h2>
     <p class="home__methodology__panel__lead">
-      Du 21 septembre au 23 octobre, l'Association des journalistes LGBTI a relevé les séquences discriminantes au cours de cette émission phare de RTL qui réunit chaque jour plus de 2 millions d’auditeurs.
+      Du 21 septembre au 23 octobre, l'Association des journalistes LGBTI a relevé les séquences discriminantes dans l'émission phare de RTL qui réunit chaque jour plus de 2 millions d’auditeurs.
     </p>
     <div class="row home__methodology__panel__figures text-center">
       <div class="col home__methodology__panel__figures__item">
