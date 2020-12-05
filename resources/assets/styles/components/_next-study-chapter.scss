@@ -1,0 +1,62 @@
+.next-study-chapter {
+  background: mix($primary, white);
+  border-top: 2px solid $primary;
+  margin: $spacer-xl -0.5 * $grid-gutter-width 0;
+
+  &__container {
+    max-width: $page-max-width;
+    margin: 0 auto;
+    padding: $spacer-xl 0 $spacer-xxl;
+    position: relative;
+
+    &__heading {
+      font-size: 1rem;
+      margin-bottom: 0;
+      padding-bottom: $spacer-xs;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      color: $primary;
+    }
+
+    &__link {
+      color: #fff;
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      &:hover &__thumbnail {
+        transform: translate(-1rem, -1rem);
+        box-shadow: 1rem 1rem 0 0 $dark;
+      }
+
+      &__thumbnail {
+        border: 2px solid $primary;
+        margin-right: $spacer;
+        background: white;
+        transition: 300ms;
+        box-shadow: 0 0 0 0 $dark;
+
+      }
+
+      &__title {
+        font-size: $h2-font-size;
+        text-shadow: 1px 1px 0 $primary, 0 2px 0 $primary,
+                    -1px 1px 0 $primary,
+                    1px -1px 0 $primary,
+                    -1px -1px 0 $primary;
+      }
+
+      &__arrow {
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+      }
+    }
+  }
+}
