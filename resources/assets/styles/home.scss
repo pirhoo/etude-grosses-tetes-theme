@@ -194,6 +194,7 @@
             max-width: 70px;
             max-height: 70px;
             overflow: hidden;
+            margin-left: $spacer;
 
             &__image {
               background: $light;
