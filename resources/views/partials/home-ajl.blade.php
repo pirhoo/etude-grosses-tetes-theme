@@ -3,10 +3,10 @@
     <div class="row align-items-center justify-content-center text-center">
       <div class="col order-1 home__ajl__punchline">
         <h1>
-          Une étude de l'Association des Journalistes LGBT+&nbsp;🏳️‍🌈
+          Une étude de l'Association des Journalistes LGBTI&nbsp;🏳️‍🌈
         </h1>
         <p class="lead">
-          Ici une courte présentation de l'AJL et de ses actions car tout le monde ne connait pas encore l'association.
+          L'Association des journalistes lesbiennes, gays, bi-e-s, trans et intersexes (AJL) œuvre pour un meilleur traitement des questions LGBTI dans les médias.
         </p>
         <a class="home__ajl__button btn btn-dark btn-lg" href="https://www.ajlgbt.info" target="_blank">
           En savoir plus

@@ -41,6 +41,16 @@
     }
   }
 
+  &__pr {
+
+    &__panel {
+
+      &__content {
+        max-width: $page-max-width;
+      }
+    }
+  }
+
   &__ajl {
     min-height: 60vh;
 

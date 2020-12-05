@@ -22,6 +22,31 @@ add_action('admin_menu', function () {
     remove_menu_page('edit.php');
 });
 
+
+/**
+ * A shortcode for Datawrapper
+ */
+add_shortcode('datawrapper', function ($atts = array()) {
+  $defaults = array(
+    'position' => 'flow',
+    'url' => '',
+    'height' => 500,
+    'title' => '',
+    'description' => ''
+  );
+  extract(shortcode_atts($defaults, $atts));
+  $id = datawrapper_id($url, 'datawrapper-chart-') . '-' . uniqid();
+  return <<<EOD
+    <div class="datawrapper-chart datawrapper-chart--{$position}">
+      <h4 class="datawrapper-chart__title">{$title}</h4>
+      <p class="datawrapper-chart__description">{$description}</p>
+      <iframe title="{$title}" height="{$height}" src="{$url}" id="{$id}" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;"></iframe>
+      <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"])for(var e in a.data["datawrapper-height"]){var t=document.getElementById("datawrapper-chart-"+e)||document.querySelector("iframe[src*='"+e+"']");t&&(t.style.height=a.data["datawrapper-height"][e]+"px")}}))}();</script>
+    </div>
+  EOD;
+});
+
+
 /**
  * Theme assets
  */

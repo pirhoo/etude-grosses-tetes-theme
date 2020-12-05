@@ -11,13 +11,11 @@
   <div class="page__sidebar page__sidebar--left">
 
   </div>
-  <div class="page__content">
+  <div class="page__content post-content">
     @php the_content() @endphp
   </div>
 
-  <div class="page__sidebar page__sidebar--right">
-
-  </div>
+  <div class="page__sidebar page__sidebar--right"></div>
 </div>
 
 @include('partials/next-study-chapter')

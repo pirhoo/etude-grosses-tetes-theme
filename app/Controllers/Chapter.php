@@ -46,4 +46,9 @@ class Chapter extends Controller
     {
       return Chapter::all()[0];
     }
+
+    public function parent() {
+      $post_parent_id = Chapter::first()->post_parent;
+      return get_post($post_parent_id);
+    }
 }

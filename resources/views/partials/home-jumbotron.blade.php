@@ -6,7 +6,7 @@
           Des remarques sexistes <span class="text-nowrap">toutes les 11 minutes 🙅</span>
         </h1>
         <p class="lead">
-          C'est ce que rêvèle note dernière étude sur Les Grosses Têtes. Avec en moyenne <strong class="font-weight-bold">19 épisodes problématiques par émission</strong>, blablabla
+          C'est ce que rêvèle note dernière étude sur Les Grosses Têtes. Avec en moyenne <strong class="font-weight-bold">19 épisodes discriminants par émission</strong>,les minorités sont à nouveau désignées aux yeux et aux oreilles de tou.te.s comme le bouc émissaire idéal.
         </p>
       </div>
       <a class="col home__jumbotron__link mx-3"  href="{{ get_permalink(Chapter::first()) }}">

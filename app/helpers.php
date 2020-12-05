@@ -5,6 +5,18 @@ namespace App;
 use Roots\Sage\Container;
 
 /**
+ * Get a Datawrapper ID according to the given URL
+ *
+ * @param string $url
+ * @param string $prefix
+ * @return string
+ */
+function datawrapper_id($url = '', $prefix = '') {
+  preg_match('/\/(\w+)\/(\d+)\/$/', $url, $matches);
+  return $prefix . $matches[1];
+}
+
+/**
  * Get the sage container.
  *
  * @param string $abstract
