@@ -189,6 +189,19 @@
             margin-bottom: 0;
             font-size: italic;
           }
+
+          &__thumbnail {
+            max-width: 70px;
+            max-height: 70px;
+            overflow: hidden;
+
+            &__image {
+              background: $light;
+              width: 100%;
+              height: auto;
+              border: 0;
+            }
+          }
         }
       }
     }
