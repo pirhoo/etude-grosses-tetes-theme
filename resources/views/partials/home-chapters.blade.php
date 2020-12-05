@@ -1,7 +1,10 @@
 <div class="home__chapters">
   <div class="container home__chapters__panel">
     <div class="row no-gutters">
-      <div class="col home__chapters__panel__body">
+      <div class="col-7">
+        <div class="py-4 pr-4 d-flex flex-column h-100">
+          @include('partials/home-interviews')
+        </div>
       </div>
       <div class="col home__chapters__panel__list">
         @foreach (FrontPage::studyChapters() as $chapter)

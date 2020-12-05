@@ -1,3 +1,17 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &.admin-bar {
+    min-height: calc(100vh - 32px);    
+  }
+
+  *[role=document] {
+    flex-grow: 1;
+  }
+}
+
 .next-study-chapter {
   background: mix($primary, white);
   border-top: 2px solid $primary;
@@ -20,15 +34,19 @@
     }
 
     &__link {
-      color: #000;
+      color: #fff;
 
       &:hover {
-        color: $body-color;
+        color: #fff;
         text-decoration: none;
       }
 
       &__title {
         font-size: $h2-font-size;
+        text-shadow: 1px 1px 0 $primary, 0 2px 0 $primary,
+                    -1px 1px 0 $primary,
+                    1px -1px 0 $primary,
+                    -1px -1px 0 $primary;
       }
 
       &__arrow {
