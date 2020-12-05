@@ -9,6 +9,7 @@
           <p class="home__interviews__container__list__item__excerpt">
             {{ $interview->post_excerpt }}
           </p>
+          {!! get_the_post_thumbnail($interview, 'post-thumbnail', ['class' => 'home__interviews__container__list__item__thumbnail']) !!}
         </a>
       @endforeach
     </div>

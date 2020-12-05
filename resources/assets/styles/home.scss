@@ -13,24 +13,13 @@
     &__link {
       padding: 0;
       min-height: 70%;
-      background: #fff;
+      background: #fff url('../images/laurent ruquier.jpg') no-repeat center center;
+      background-size: contain;
       display: flex;
       position: relative;
 
       &, &:hover {
         text-decoration: none;
-      }
-
-      &:after {
-        content: "un visuel ici car les gens aiment les visuels";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-        font-variant: small-caps;
-        opacity: 0.5;
-        font-style: italic;
       }
 
       &__button {
@@ -109,6 +98,8 @@
           transition: 300ms;
           box-shadow: 0 0 0 0 $dark;
           margin-bottom: $spacer-lg;
+          position: relative;
+          overflow: hidden;
 
           &:last-of-type {
             margin-bottom: 0;
@@ -138,6 +129,19 @@
 
           &__title, &__excerpt {
             padding: $spacer;
+            position: relative;
+            z-index: 50;
+          }
+
+          &__thumbnail {
+            z-index: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: auto;
+            max-width: 100%;
           }
         }
       }
@@ -146,7 +150,7 @@
 
   &__chapters {
     padding: 0;
-    margin-bottom: $spacer-xxl;
+    margin-bottom: $spacer-xl;
     font-size: 1rem;
 
     &__panel {
@@ -191,6 +195,7 @@
 
   &__methodology {
     padding: $spacer-lg 0;
+    margin-bottom: $spacer-xl;
 
     &__panel {
       background: $dark;
