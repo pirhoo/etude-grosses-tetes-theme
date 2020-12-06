@@ -61,10 +61,14 @@
     max-width: $page-max-width;
     min-height: 50vh;
     margin: 0;
+
+    @include media-breakpoint-down('sm') {
+      margin: 0 auto;
+    }
   }
 
   &__sidebar {
-    padding: 0 $spacer;
+    padding: 0;
 
     @include media-breakpoint-down('md') {
       display: none;
@@ -72,19 +76,18 @@
 
     &--right {
       justify-content: flex-start;
-      margin-right: auto;
     }
 
     &--left {
       justify-content: flex-end;
-      margin-left: auto;
     }
 
     &--left,
     &--right {
       display: flex;
+      width: calc((100vh - #{$page-max-width} - #{$spacer * 2}) / 2);
 
-      @include media-breakpoint-down('md') {
+      @include media-breakpoint-down('sm') {
         display: block;
         text-align: left;
       }
@@ -95,7 +98,7 @@
           display: flex;
           flex-direction: column;
 
-          @include media-breakpoint-down('md') {
+          @include media-breakpoint-down('sm') {
             display: block;
           }
         }

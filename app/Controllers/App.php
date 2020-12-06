@@ -35,4 +35,9 @@ class App extends Controller
     {
         return date("Y");
     }
+
+    public function legal()
+    {
+      return get_page_by_title('Mentions Légales');
+    }
 }
