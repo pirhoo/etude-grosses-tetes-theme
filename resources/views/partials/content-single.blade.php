@@ -8,14 +8,16 @@
     </div>
   @endif
 
-  <div class="d-flex justify-content-center">
+  <div class="d-block d-md-flex justify-content-center">
     <div class="single__sidebar single__sidebar--left"></div>
 
     <div class="single__content post-content">
       @php the_content() @endphp
     </div>
 
-    <div class="single__sidebar single__sidebar--right"></div>
+    <div class="single__sidebar single__sidebar--right">
+      {!! do_shortcode('[ssba-buttons]') !!}
+    </div>
   </div>
 
   @include('partials/next-study-chapter')

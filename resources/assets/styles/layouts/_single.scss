@@ -60,6 +60,7 @@
     width: 100%;
     max-width: $page-max-width;
     min-height: 50vh;
+    margin: 0;
   }
 
   &__sidebar {
@@ -67,6 +68,38 @@
 
     @include media-breakpoint-down('md') {
       display: none;
+    }
+
+    &--right {
+      justify-content: flex-start;
+      margin-right: auto;
+    }
+
+    &--left {
+      justify-content: flex-end;
+      margin-left: auto;
+    }
+
+    &--left,
+    &--right {
+      display: flex;
+
+      @include media-breakpoint-down('md') {
+        display: block;
+        text-align: left;
+      }
+
+      .ssbp-wrap {
+
+        & > * {
+          display: flex;
+          flex-direction: column;
+
+          @include media-breakpoint-down('md') {
+            display: block;
+          }
+        }
+      }
     }
   }
 }
