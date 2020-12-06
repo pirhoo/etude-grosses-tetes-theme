@@ -2,12 +2,29 @@
 
   &__jumbotron {
     border-top: currentColor solid 2px;
-    min-height: 80vh;
+    min-height: 60vh;
     background: $primary;
     color: #fff;
 
     &__punchline {
       text-align: right;
+
+      @include media-breakpoint-down('md') {
+        text-align: center;
+        margin-top: $spacer-xl;
+      }
+
+      &__heading {
+        @include media-breakpoint-down('md') {
+          font-size: 1.4rem;
+        }
+      }
+
+      &__lead {
+        @include media-breakpoint-down('md') {
+          font-size: 1.2rem;
+        }
+      }
     }
 
     &__link {
@@ -17,6 +34,10 @@
       background-size: contain;
       display: flex;
       position: relative;
+
+      @include media-breakpoint-down('md') {
+        min-height: 300px;
+      }
 
       &, &:hover {
         text-decoration: none;

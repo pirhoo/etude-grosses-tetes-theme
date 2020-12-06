@@ -4,6 +4,10 @@
     padding: $spacer-lg 0;
     margin-bottom: $spacer-xl;
 
+    @include media-breakpoint-down('md') {
+      margin: $spacer $spacer 0;
+    }
+
     &__panel {
       background: $dark;
       color: #fff;
@@ -11,11 +15,26 @@
 
       &__figures {
         padding: $spacer-lg 0;
+        text-align: center;
+
+        @include media-breakpoint-down('md') {
+          padding: 0;
+        }
 
         &__item {
           display: flex;
           flex-direction: column;
           font-weight: bold;
+
+          @include media-breakpoint-down('md') {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 $spacer $spacer;
+            text-align: left;
+
+          }
 
           &__display {
             line-height: 1;
@@ -24,6 +43,10 @@
             font-family: $headings-font-family;
             color: $primary;
             white-space: nowrap;
+
+            @include media-breakpoint-down('md') {
+              margin-right: $spacer;
+            }
 
             &__emoji {
               position: relative;

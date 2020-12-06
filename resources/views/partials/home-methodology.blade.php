@@ -4,7 +4,7 @@
     <p class="home__methodology__panel__lead">
       Du 21 septembre au 23 octobre, l'Association des journalistes LGBTI a relevé les séquences discriminantes dans l'émission phare de RTL qui réunit chaque jour plus de 2 millions d’auditeurs.
     </p>
-    <div class="row home__methodology__panel__figures text-center">
+    <div class="row home__methodology__panel__figures">
       <div class="col home__methodology__panel__figures__item">
         <span class="home__methodology__panel__figures__item__display">
           <span class="home__methodology__panel__figures__item__display__emoji">📻</span> 24
@@ -15,7 +15,7 @@
       </div>
       <div class="col home__methodology__panel__figures__item">
         <span class="home__methodology__panel__figures__item__display">
-          <span class="home__methodology__panel__figures__item__display__emoji">⏱</span>2&nbsp;160
+          <span class="home__methodology__panel__figures__item__display__emoji">⏱</span> 2&nbsp;160
         </span>
         <span class="home__methodology__panel__figures__item__unit">
           minutes écoutées

@@ -1,7 +1,12 @@
 .home {
-  
+
   &__pr {
     margin-bottom: $spacer-xxl;
+
+    @include media-breakpoint-down('sm') {
+      border-top: 2px solid $body-color;
+      padding-top: $spacer-xl;
+    }
 
     &__panel {
 

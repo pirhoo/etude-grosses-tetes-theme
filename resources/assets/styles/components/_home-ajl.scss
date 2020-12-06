@@ -3,6 +3,11 @@
   &__ajl {
     min-height: 60vh;
 
+    @include media-breakpoint-down('sm') {
+      min-height: 0;
+      margin: $spacer-xl 0;
+    }
+
     &__button {
       font-family: $headings-font-family;
       font-weight: bold;
@@ -20,6 +25,15 @@
 
       &__logo {
         max-width: 250px;
+
+        @include media-breakpoint-down('md') {
+          max-width: 200px;
+        }
+
+        @include media-breakpoint-down('sm') {
+          max-width: 100px;
+          margin: $spacer-xl 0;
+        }
       }
     }
   }

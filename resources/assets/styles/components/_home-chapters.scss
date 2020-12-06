@@ -15,12 +15,26 @@
         margin: 0 auto;
         height: 100%;
 
+        @include media-breakpoint-down('md') {
+          max-width: 100%;
+        }
+
         &__list {
           display: flex;
           height: 100%;
           flex-wrap: wrap;
           flex-direction: column;
           padding: 0;
+          min-height: 250px;
+
+          @include media-breakpoint-down('md') {
+            flex-direction: row;
+            margin-right: -$spacer-xl;
+          }
+
+          @include media-breakpoint-down('xs') {
+            margin-right: 0;
+          }
 
           &__item {
             background: mix($primary, #fff);
@@ -29,11 +43,25 @@
             display: flex;
             flex-direction: column;
             flex-grow: 1;
-            transition: 300ms;
             box-shadow: 0 0 0 0 $dark;
             margin-bottom: $spacer-lg;
             position: relative;
             overflow: hidden;
+            transition: transform 300ms, box-shadow 300ms;
+
+            @include media-breakpoint-down('md') {
+              max-width: calc(50% - #{$spacer-xl});
+              margin-right: $spacer-xl;
+              margin-bottom: 0;
+            }
+
+            @include media-breakpoint-down('xs') {
+              max-width: calc(100% - #{$spacer-xl});
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: $spacer-lg;
+              min-height: 200px;
+            }
 
             &:last-of-type {
               margin-bottom: 0;
@@ -41,8 +69,13 @@
 
             &:hover {
               text-decoration: none;
-              transform: translate(-1rem, -1rem);
-              box-shadow: 1rem 1rem 0 0 $dark;
+              transform: translate(-$spacer, -$spacer);
+              box-shadow: $spacer $spacer 0 0 $dark;
+
+              @include media-breakpoint-down('md') {
+                box-shadow: $spacer-xs $spacer-xs 0 0 $dark;
+                transform: translate(-$spacer-xs, -$spacer-xs);
+              }
             }
 
             &__title {
@@ -73,9 +106,9 @@
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
-              width: 100%;
+              min-width: 100%;
+              min-height: 100%;
               height: auto;
-              max-width: 100%;
             }
           }
         }
@@ -88,6 +121,10 @@
         &__item {
           padding: $spacer-lg 0;
           border-bottom: 2px currentColor solid;
+
+          @include media-breakpoint-down('xs') {
+            padding: $spacer-lg;
+          }
 
           &:hover {
             text-decoration: none;

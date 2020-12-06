@@ -1,8 +1,8 @@
 <div class="home__chapters">
   <div class="container home__chapters__panel">
     <div class="row no-gutters">
-      <div class="col-6">
-        <div class="home__chapters__panel__interviews py-4 pr-5 d-flex flex-column h-100">
+      <div class="col-12 col-lg-6">
+        <div class="home__chapters__panel__interviews py-4 pr-lg-5 d-flex flex-column h-100">
           <div class="home__chapters__panel__interviews__list">
             @foreach (FrontPage::interviews() as $interview)
               <a href="{{ get_permalink($interview) }}" class="home__chapters__panel__interviews__list__item">
@@ -18,7 +18,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 home__chapters__panel__list">
+      <div class="col-12 col-lg-6 home__chapters__panel__list">
         @foreach (FrontPage::studyChapters() as $chapter)
           <a href="{{ get_permalink($chapter) }}" class="home__chapters__panel__list__item d-flex text-dark">
             <div class="flex-grow-1">
