@@ -16,15 +16,16 @@ class Interview extends Controller
 
     public function all()
     {
-        global $wpdb;
-        $title = $wpdb->esc_like('Interview de ').'%';
-        $query = $wpdb->prepare(<<<EOD
-          SELECT * FROM $wpdb->posts
-          WHERE post_title LIKE %s
-            AND post_status = 'publish'
-          ORDER BY menu_order ASC
-        EOD, $title);
-        return $wpdb->get_results($query);
+        $study_root = get_page_by_title('Interviews');
+        if ( is_null($study_root) ) {
+          return [];
+        }
+
+        return get_pages([
+          'child_of' => $study_root->ID,
+          'sort_order' => 'ASC',
+          'sort_column' => 'menu_order'
+        ]);
     }
 
     public function ids() {

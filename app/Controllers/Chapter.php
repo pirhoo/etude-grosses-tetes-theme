@@ -37,7 +37,7 @@ class Chapter extends Controller
     }
 
     public function nextPagesIds () {
-      return array_map('intval', array_column(Chapter::nextPages(), 'ID'));
+      return array_column(Chapter::nextPages(), 'ID');
     }
 
     public function all()
