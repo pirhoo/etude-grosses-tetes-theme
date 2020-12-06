@@ -1,0 +1,37 @@
+.home {
+
+  &__methodology {
+    padding: $spacer-lg 0;
+    margin-bottom: $spacer-xl;
+
+    &__panel {
+      background: $dark;
+      color: #fff;
+      padding: $spacer-lg $spacer;
+
+      &__figures {
+        padding: $spacer-lg 0;
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          font-weight: bold;
+
+          &__display {
+            line-height: 1;
+            font-size: 3rem;
+            display: block;
+            font-family: $headings-font-family;
+            color: $primary;
+            white-space: nowrap;
+
+            &__emoji {
+              position: relative;
+              top: -0.1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

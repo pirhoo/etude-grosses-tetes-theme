@@ -1,0 +1,26 @@
+.home {
+
+  &__ajl {
+    min-height: 60vh;
+
+    &__button {
+      font-family: $headings-font-family;
+      font-weight: bold;
+      transition: 300ms;
+      box-shadow: 0 0 0 0 $primary;
+
+      &:hover {
+        text-decoration: none;
+        transform: translate(-1rem, -1rem);
+        box-shadow: 1rem 1rem 0 0 $primary;
+      }
+    }
+
+    &__link {
+
+      &__logo {
+        max-width: 250px;
+      }
+    }
+  }
+}

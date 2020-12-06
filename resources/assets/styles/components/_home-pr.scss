@@ -1,0 +1,13 @@
+.home {
+  
+  &__pr {
+    margin-bottom: $spacer-xxl;
+
+    &__panel {
+
+      &__content {
+        max-width: $page-max-width;
+      }
+    }
+  }
+}
