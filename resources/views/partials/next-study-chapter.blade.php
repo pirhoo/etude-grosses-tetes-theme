@@ -3,7 +3,7 @@
     <div class="next-study-chapter__container">
       <h3 class="next-study-chapter__container__heading">Suite de l'étude</h3>
       <a href="{{ get_permalink(Chapter::nextChapter()) }}" class="next-study-chapter__container__link d-flex">
-        <span class="flex-grow-1 d-flex">
+        <span class="flex-grow-1 d-flex align-items-start">
           {!! get_the_post_thumbnail(Chapter::nextChapter(), 'next-study-chapter', ['class' => 'next-study-chapter__container__link__thumbnail']) !!}
           <div>
             <h4 class="next-study-chapter__container__link__title">

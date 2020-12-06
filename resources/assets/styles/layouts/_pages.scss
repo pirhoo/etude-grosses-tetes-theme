@@ -63,5 +63,9 @@
 
   &__sidebar {
     padding: 0 $spacer;
+
+    @include media-breakpoint-down('md') {
+      display: none;
+    }
   }
 }

@@ -4,10 +4,15 @@
   margin: $spacer-xl -0.5 * $grid-gutter-width 0;
 
   &__container {
+    width: 100%;
     max-width: $page-max-width;
     margin: 0 auto;
     padding: $spacer-xl 0 $spacer-xxl;
     position: relative;
+
+    @include media-breakpoint-down('sm') {
+      max-width: calc(100% - #{$spacer * 2});
+    }
 
     &__heading {
       font-size: 1rem;
@@ -28,8 +33,13 @@
       }
 
       &:hover &__thumbnail {
-        transform: translate(-1rem, -1rem);
-        box-shadow: 1rem 1rem 0 0 $dark;
+        transform: translate(-$spacer, -$spacer);
+        box-shadow: $spacer $spacer 0 0 $dark;
+
+        @include media-breakpoint-down('md') {
+          transform: translate(-$spacer-xs, -$spacer-xs);
+          box-shadow: $spacer-xs $spacer-xs 0 0 $dark;
+        }
       }
 
       &__thumbnail {
@@ -38,6 +48,16 @@
         background: white;
         transition: 300ms;
         box-shadow: 0 0 0 0 $dark;
+
+        @include media-breakpoint-down('sm') {
+          max-width: 90px;
+          height: auto;
+          margin-right: $spacer;
+        }
+
+        @include media-breakpoint-down('xs') {
+          display: none;
+        }
       }
 
       &__title {
