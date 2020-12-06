@@ -8,7 +8,7 @@
         <p class="lead">
           L'Association des journalistes lesbiennes, gays, bi-e-s, trans et intersexes (AJL) œuvre pour un meilleur traitement des questions LGBTI dans les médias.
         </p>
-        <a class="home__ajl__button btn btn-dark btn-lg" href="https://www.ajlgbt.info" target="_blank">
+        <a class="home__ajl__button btn btn-dark btn-lg" href="{{ get_permalink(Chapter::first()) }}">
           En savoir plus
         </a>
       </div>
