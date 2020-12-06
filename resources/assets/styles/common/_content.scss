@@ -48,16 +48,19 @@
 
       @each $breakpoint, $container-max-width in $container-max-widths {
         @include media-breakpoint-up($breakpoint) {
-           max-width: $container-max-width - $page-max-width;
+           max-width: max(380px, $container-max-width - $page-max-width);
          }
       }
 
       @include media-breakpoint-down('md') {
-        box-shadow: none;
         float: none;
         max-width: none;
         margin-left: 0;
         margin-right: 0;
+      }
+
+      @include media-breakpoint-down('md') {
+        box-shadow: $spacer-xs $spacer-xs 0 0 mix($primary, white);
       }
     }
   }
@@ -67,27 +70,6 @@
 
     img {
       height: auto;
-    }
-
-    .alignleft, .alignright {
-      padding: $spacer;
-      padding-bottom: 0;
-      border: 2px solid $primary;
-      margin-bottom: $paragraph-margin-bottom;
-
-      @each $breakpoint, $container-max-width in $container-max-widths {
-        @include media-breakpoint-up($breakpoint) {
-           max-width: min(300px, $container-max-width - $page-max-width);
-         }
-      }
-
-      @include media-breakpoint-down('md') {
-        box-shadow: none;
-        float: none;
-        max-width: none;
-        margin-left: 0;
-        margin-right: 0;
-      }
     }
 
     .alignleft {
@@ -111,6 +93,30 @@
         @include media-breakpoint-up($breakpoint) {
            margin-right: -0.5 * min(300px, $container-max-width - $page-max-width);
          }
+      }
+    }
+
+    .alignleft, .alignright {
+      padding: $spacer;
+      padding-bottom: 0;
+      border: 2px solid $primary;
+      margin-bottom: $paragraph-margin-bottom;
+
+      @each $breakpoint, $container-max-width in $container-max-widths {
+        @include media-breakpoint-up($breakpoint) {
+           max-width: min(300px, $container-max-width - $page-max-width);
+         }
+      }
+
+      @include media-breakpoint-down('md') {
+        float: none;
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @include media-breakpoint-down('md') {
+        box-shadow: $spacer-xs $spacer-xs 0 0 mix($primary, white);
       }
     }
   }
@@ -198,6 +204,10 @@
       padding-left: $player-height;
       position: relative;
       line-height: 1;
+
+      @include media-breakpoint-down('md') {
+        box-shadow: $spacer-xs $spacer-xs 0 0 mix($primary, white);
+      }
 
       audio {
         display: none;
@@ -287,6 +297,7 @@
           right: 0;
           transform: translateY(-50%);
           pointer-events: none;
+          overflow: hidden !important;
 
           wave {
             border: 0 !important;

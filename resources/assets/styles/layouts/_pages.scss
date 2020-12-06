@@ -57,7 +57,8 @@
 
 
   &__content {
-    min-width: $page-max-width;
+    width: 100%;
+    max-width: $page-max-width;
   }
 
   &__sidebar {

@@ -30,6 +30,7 @@ export default {
         waveColor: '#6c757d',
         barWidth: 1,
         progressColor: '#e20318',
+        responsive: true,
       })
       // Load the song using the same src
       ws.load(audio.src)
