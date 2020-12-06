@@ -40,4 +40,9 @@ class App extends Controller
     {
       return get_page_by_title('Mentions Légales');
     }
+
+    public function legal_permalink()
+    {
+      return get_permalink(App::legal());
+    }
 }

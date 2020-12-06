@@ -4,7 +4,7 @@
       <img src="@asset('images/ajl-white.png')" height="18" class="mr-2" /> Une étude de l'Association des Journalistes LGBTI
     </p>
     <p class="ml-auto">
-      © {{ App::year() }} - <a href="{{ get_permalink(App::legal()) }}">Mentions Légales</a>
+      © {{ App::year() }} - <a href="{{ App::legal_permalink() }}">Mentions Légales</a>
     </p>
   </div>
 </footer>

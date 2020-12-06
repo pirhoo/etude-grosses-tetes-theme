@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="pt-3 text-center">
-      <a href="{{ get_permalink(FrontPage::methodology()) }}" class="btn btn-primary btn-lg text-uppercase text-heading mb-2">
+      <a href="{{ FrontPage::methodology_permalink() }}" class="btn btn-primary btn-lg text-uppercase text-heading mb-2">
         En savoir plus
       </a>
     </div>

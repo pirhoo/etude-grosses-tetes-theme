@@ -33,4 +33,9 @@ class FrontPage extends Controller
     {
       return get_page_by_title('Methodologie');
     }
+
+    public function methodology_permalink()
+    {
+      return get_permalink(FrontPage::methodology());
+    }
 }
