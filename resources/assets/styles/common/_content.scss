@@ -16,6 +16,10 @@
       margin-bottom: $spacer;
     }
 
+    iframe {
+      width: 100% !important;
+    }
+
     &--right {
       float: right;
       margin-left: $spacer-xl;
@@ -54,12 +58,10 @@
 
       @include media-breakpoint-down('md') {
         float: none;
-        max-width: none;
+        max-width: 100%;
+        min-width: none;
         margin-left: 0;
         margin-right: 0;
-      }
-
-      @include media-breakpoint-down('md') {
         box-shadow: $spacer-xs $spacer-xs 0 0 mix($primary, white);
       }
     }
