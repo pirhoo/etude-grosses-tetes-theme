@@ -3,6 +3,35 @@
 namespace App;
 
 /**
+ * Add the featured image and the except to each sub-menu item
+ */
+add_filter('nav_menu_item_title', function ($title, $item, $args, $depth) {
+  $post_id = url_to_postid( $item->url );
+  if ($depth > 0 && $post_id > 0) {
+    $post = get_post($post_id);
+    $thumbnail_class = 'menu-item__wrapper__thumbnail__image';
+    $thumbnail = get_the_post_thumbnail($post, 'home-md', ['class' => $thumbnail_class]);
+    $title = <<<EOD
+      <span class="menu-item__wrapper">
+        <span class="menu-item__wrapper__thumbnail">
+          {$thumbnail}
+        </span>
+        <span>
+          <span class="menu-item__wrapper__title">
+            {$title}
+          </span>
+          <span class="menu-item__wrapper__excerpt">
+            {$post->post_excerpt}
+          </span>
+        </span>
+      </span>
+    EOD;
+  }
+	return $title;
+}, 10, 4);
+
+
+/**
  * Add <body> classes
  */
 add_filter('body_class', function (array $classes) {

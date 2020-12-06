@@ -2,12 +2,23 @@
   background: $primary;
   color: #fff;
   padding: 2rem 0;
+  position: relative;
+  z-index: $zindex-sticky;
+
+  @include media-breakpoint-down('sm') {
+    padding: $spacer $spacer $spacer-xs;
+  }
 
   &__container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
+    @include media-breakpoint-down('sm') {
+      flex-direction: column;
+      text-align: center;
+    }
 
     &__heading {
       margin: 0;
@@ -17,6 +28,10 @@
         background: #fff;
         position: relative;
         display: block;
+
+        @include media-breakpoint-down('md') {
+          font-size: 1.5rem;
+        }
 
         &:hover {
           text-decoration: none;
@@ -44,6 +59,11 @@
     &__nav-primary {
       margin-left: auto;
 
+      @include media-breakpoint-down('sm') {
+        margin-left: 0;
+        margin-top: $spacer-xs;
+      }
+
       &__menu {
         @extend .nav;
 
@@ -52,17 +72,40 @@
 
           a {
             @extend .nav-link;
+            position: relative;
+            z-index: $zindex-dropdown - 10;
             color: inherit;
             font-family: $headings-font-family;
 
-            &:hover {
-              background: $body-color
+            @include media-breakpoint-down('md') {
+              font-size: 1rem;
+              padding: 0.25rem $spacer-sm;
+            }
+
+            &:hover, &:focus {
+              position: relative;
+              z-index: $zindex-dropdown + 10;
+            }
+
+            &:hover:not(:focus) {
+              box-shadow: 0 -2px 0 0 #fff inset;
+            }
+
+            &:focus {
+              background: $dark;
             }
           }
 
           &.menu-item-has-children {
             position: relative;
             z-index: $zindex-dropdown;
+
+            // On mobile, menu are positioned relatively to the header
+            // instead of their menu item.
+            @include media-breakpoint-down('md') {
+              position: static;
+              z-index: auto;
+            }
 
             & > a:before {
               content: "";
@@ -74,24 +117,91 @@
               background-size: contain;
             }
 
-            &:hover > .sub-menu {
-              display: block;
+            a:focus ~ .sub-menu,
+            a ~ .sub-menu:focus,
+            a ~ .sub-menu:active {
+              opacity: 1;
+              pointer-events: all;
+              transition: opacity 300ms, max-height 300ms;
             }
 
             & > .sub-menu {
-              min-width: 300px;
+              opacity: 0;
+              transition: none;
+              pointer-events: none;
+
+              width: 400px;
               position: absolute;
-              display: none;
+              right: 0;
               background: #fff;
               color: $body-color;
+              text-align: left;
               border: $primary 2px solid;
-              box-shadow: $spacer $spacer 0 0 rgba($primary, 0.5);
+              box-shadow: $spacer $spacer 0 0 mix($primary, #fff);
               padding: 0;
               list-style: none;
 
-              & > .menu-item a:hover {
-                background: $body-color;
-                color: #fff;
+              &:before {
+                content: "";
+                z-index: 0;
+                position: absolute;
+                bottom: 100%;
+                height: 100vh;
+                background: rgba($primary, 0.7);
+                left: 0;
+                right: 0;
+                display: none;
+
+                @include media-breakpoint-down('md') {
+                  display: block;
+                }
+              }
+
+              @include media-breakpoint-down('md') {
+                top: 100%;
+                right: 0;
+                width: 100%;
+                box-shadow: 0 $spacer-xs 0 0 mix($primary, #fff);
+              }
+
+              & > .menu-item {
+                border-bottom: 1px solid mix($primary, #fff);
+
+                a:hover {
+                  background: $body-color;
+                  color: #fff;
+                }
+
+                .menu-item__wrapper {
+                  display: flex;
+                  align-items: flex-start;
+
+                  &__thumbnail {
+                    margin-right: $spacer;
+                    background: $light;
+                    height: auto;
+                    width: 100%;
+                    max-width: 70px;
+                    min-height: 44px;
+                    margin: $spacer-xs $spacer-lg $spacer-xs 0;
+
+                    &__image {
+                      width: 100%;
+                      height: auto;
+                    }
+                  }
+
+                  &__title {
+                    display: block;
+                  }
+
+                  &__excerpt {
+                    display: block;
+                    font-size: 1rem;
+                    font-family: $font-family-base;
+                    color: $text-muted;
+                  }
+                }
               }
 
               .sub-menu {
@@ -103,7 +213,6 @@
           }
         }
       }
-
     }
   }
 }
