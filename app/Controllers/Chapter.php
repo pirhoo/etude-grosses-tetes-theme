@@ -20,8 +20,8 @@ class Chapter extends Controller
           return null;
         }
         $chapters = Chapter::all();
-        $current_chapter_index = array_search(get_post(), $chapters);
-        if ($current_chapter_index == NULL) {
+        $current_chapter_index = array_search(get_post()->ID, Chapter::ids());
+        if ($current_chapter_index === false) {
           return $chapters[0];
         }
         return $chapters[$current_chapter_index + 1];
@@ -43,6 +43,10 @@ class Chapter extends Controller
           'sort_order' => 'ASC',
           'sort_column' => 'menu_order'
         ]);
+    }
+
+    public function ids() {
+      return array_column(Chapter::all(), 'ID');
     }
 
     public function first()

@@ -11,7 +11,7 @@ class Interview extends Controller
         if (!is_page()) {
           return false;
         }
-        return in_array(get_post()->ID, array_column(Interview::all(), 'ID'));
+        return in_array(get_post()->ID, Interview::ids());
     }
 
     public function all()
@@ -25,6 +25,10 @@ class Interview extends Controller
           ORDER BY menu_order ASC
         EOD, $title);
         return $wpdb->get_results($query);
+    }
+
+    public function ids() {
+      return array_column(Interview::all(), 'ID');
     }
 
     public function first()
