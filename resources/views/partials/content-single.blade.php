@@ -16,7 +16,9 @@
     </div>
 
     <div class="single__sidebar single__sidebar--right">
-      {!! do_shortcode('[ssba-buttons]') !!}
+      @if (has_post_thumbnail())
+        {!! do_shortcode('[ssba-buttons]') !!}
+      @endif
     </div>
   </div>
 
