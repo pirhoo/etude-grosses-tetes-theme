@@ -14,15 +14,6 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_post_type_support( 'page', 'excerpt' );
 
-
-/**
- * Disable post in the menu
- */
-add_action('admin_menu', function () {
-    remove_menu_page('edit.php');
-});
-
-
 /**
  * A shortcode for Datawrapper
  */

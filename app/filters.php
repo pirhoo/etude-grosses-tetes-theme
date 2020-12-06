@@ -30,6 +30,14 @@ add_filter('nav_menu_item_title', function ($title, $item, $args, $depth) {
 	return $title;
 }, 10, 4);
 
+/**
+ * Add default Avatar with AJL logo
+ */
+add_filter('avatar_defaults', function($avatar_defaults) {
+	$myavatar = get_template_directory_uri() . '/assets/images/ajl-full.png';
+	$avatar_defaults[$myavatar] = 'AJL';
+	return $avatar_defaults;
+});
 
 /**
  * Add <body> classes
