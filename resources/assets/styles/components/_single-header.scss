@@ -1,0 +1,78 @@
+.single {
+
+  &__header {
+    max-width: $page-max-width;
+    margin: auto;
+    padding: 3rem 0 2rem;
+
+    &__title {
+      font-family: $font-family-base;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    &__meta {
+      font-size: $font-size-sm;
+      color: $text-muted;
+
+      a {
+        color: mix($text-muted, $link-color);
+      }
+
+      &__author {
+
+        &__avatar {
+          width: 2rem;
+          height: 2rem;
+          overflow: hidden;
+          border-radius: 1rem;
+          border:2px solid #fff;
+          box-shadow: 0 0 0 2px $body-color;
+        }
+      }
+
+      &__share {
+        position: relative;
+        margin-left: $spacer;
+
+        & &__toggler {
+          display: inline-flex;
+          color: $body-color;
+          height: 2rem;
+          width: 2rem;
+          border: 1px solid $text-muted;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+
+          &:focus {
+            border-color: $primary;
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+
+        &__toggler:focus ~ &__menu,
+        &__toggler ~ &__menu:hover {
+          display: block;
+        }
+
+        &__menu {
+          margin: 0;
+          position: absolute;
+          display: none;
+          right: 0;
+          top: 100%;
+          white-space: nowrap;
+          background: white;
+          border: 1px solid $primary;
+          box-shadow: $spacer-xs $spacer-xs 0 0 mix($primary, white);
+          padding: 0.25rem $spacer-xs;
+        }
+      }
+    }
+  }
+}

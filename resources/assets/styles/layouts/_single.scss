@@ -2,40 +2,9 @@
 
 .single {
 
-  &__header, &__thumbnail, &__content {
+  &__thumbnail, &__content {
     max-width: $page-max-width;
     margin: auto;
-  }
-
-  &__header {
-    padding: 3rem 0 2rem;
-
-    &__title {
-      font-family: $font-family-base;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    &__meta {
-      font-size: $font-size-sm;
-      color: $text-muted;
-
-      a {
-        color: mix($text-muted, $link-color);
-      }
-
-      &__author {
-
-        &__avatar {
-          width: 2rem;
-          height: 2rem;
-          overflow: hidden;
-          border-radius: 1rem;
-          border:2px solid #fff;
-          box-shadow: 0 0 0 2px $body-color;
-        }
-      }
-    }
   }
 
   &__thumbnail {
@@ -90,6 +59,7 @@
       @include media-breakpoint-down('sm') {
         display: block;
         text-align: left;
+        width: 100%;
       }
 
       .ssbp-wrap {
@@ -100,6 +70,7 @@
 
           @include media-breakpoint-down('sm') {
             display: block;
+            margin-bottom: $spacer;
           }
         }
       }
