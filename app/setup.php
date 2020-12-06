@@ -94,6 +94,14 @@ add_action('after_setup_theme', function () {
     add_theme_support('post-thumbnails');
 
     /**
+     * Add a few custom thumbnail sizes
+     * @link https://developer.wordpress.org/reference/functions/add_image_size/
+     */
+     add_image_size('home-sm', 70, 44);
+     add_image_size('home-md', 520, 350);
+     add_image_size('next-study-chapter', 150, 90);
+
+    /**
      * Enable HTML5 markup support
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
      */

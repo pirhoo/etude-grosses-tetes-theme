@@ -191,15 +191,17 @@
           }
 
           &__thumbnail {
+            width: 100%;
             max-width: 70px;
-            max-height: 70px;
+            max-height: 44px;
             overflow: hidden;
             margin-left: $spacer;
+            text-align: center;
 
             &__image {
               background: $light;
-              width: 100%;
-              height: auto;
+              width: auto;
+              height: 100%;
               border: 0;
             }
           }

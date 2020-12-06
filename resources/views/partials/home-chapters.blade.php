@@ -18,7 +18,7 @@
               </p>
             </div>
             <div class="home__chapters__panel__list__item__thumbnail">
-              {!! get_the_post_thumbnail($chapter, 'thumbnail', ['class' => 'home__chapters__panel__list__item__thumbnail__image']) !!}
+              {!! get_the_post_thumbnail($chapter, 'home-sm', ['class' => 'home__chapters__panel__list__item__thumbnail__image']) !!}
             </div>
           </a>
         @endforeach
