@@ -6,6 +6,14 @@ use Sober\Controller\Controller;
 
 class Interview extends Controller
 {
+    public function isInterview()
+    {
+        if (!is_page()) {
+          return false;
+        }
+        return in_array(get_post()->ID, array_column(Interview::all(), 'ID'));
+    }
+
     public function all()
     {
         global $wpdb;

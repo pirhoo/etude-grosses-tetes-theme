@@ -16,11 +16,14 @@ class Chapter extends Controller
 
     public function nextChapter()
     {
-        if (!Chapter::isChapter()) {
+        if (!Chapter::isChapter() && !Interview::isInterview()) {
           return null;
         }
         $chapters = Chapter::all();
         $current_chapter_index = array_search(get_post(), $chapters);
+        if ($current_chapter_index == NULL) {
+          return $chapters[0];
+        }
         return $chapters[$current_chapter_index + 1];
     }
 

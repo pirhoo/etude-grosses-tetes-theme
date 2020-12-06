@@ -59,6 +59,7 @@
   &__content {
     width: 100%;
     max-width: $page-max-width;
+    min-height: 50vh;
   }
 
   &__sidebar {

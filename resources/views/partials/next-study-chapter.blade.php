@@ -1,7 +1,13 @@
 @if (Chapter::hasNextChapter())
   <div class="next-study-chapter">
     <div class="next-study-chapter__container">
-      <h3 class="next-study-chapter__container__heading">Suite de l'étude</h3>
+      <h3 class="next-study-chapter__container__heading">
+        @if (Chapter::isChapter()) 
+          Suite de l'étude
+        @else
+          Lire l'étude
+        @endif
+      </h3>
       <a href="{{ get_permalink(Chapter::nextChapter()) }}" class="next-study-chapter__container__link d-flex">
         <span class="flex-grow-1 d-flex align-items-start">
           {!! get_the_post_thumbnail(Chapter::nextChapter(), 'next-study-chapter', ['class' => 'next-study-chapter__container__link__thumbnail']) !!}
