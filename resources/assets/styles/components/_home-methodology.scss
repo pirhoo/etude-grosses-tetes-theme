@@ -46,11 +46,20 @@
 
             @include media-breakpoint-down('md') {
               margin-right: $spacer;
+              font-size: 2rem;
             }
 
             &__emoji {
               position: relative;
               top: -0.1em;
+            }
+          }
+
+          &__unit {
+            line-height: 0.9;
+
+            @include media-breakpoint-down('md') {
+              font-size: 1rem;
             }
           }
         }
