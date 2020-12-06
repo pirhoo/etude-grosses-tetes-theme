@@ -34,11 +34,10 @@
 
       &__thumbnail {
         border: 2px solid $primary;
-        margin-right: $spacer;
+        margin-right: $spacer-xl;
         background: white;
         transition: 300ms;
         box-shadow: 0 0 0 0 $dark;
-
       }
 
       &__title {
