@@ -28,4 +28,9 @@ class FrontPage extends Controller
     {
       return Interview::all();
     }
+
+    public function methodology()
+    {
+      return get_page_by_title('Methodologie');
+    }
 }

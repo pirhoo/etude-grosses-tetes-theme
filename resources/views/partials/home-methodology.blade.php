@@ -1,6 +1,8 @@
 <div class="home__methodology">
   <div class="container home__methodology__panel">
-    <h2 class="home__methodology__panel__heading">Chiffres clés et méthodologie</h2>
+    <h2 class="home__methodology__panel__heading flex-grow-1">
+      Chiffres clés et méthodologie
+    </h2>
     <p class="home__methodology__panel__lead">
       Du 21 septembre au 23 octobre, l'Association des journalistes LGBTI a relevé les séquences discriminantes dans l'émission phare de RTL qui réunit chaque jour plus de 2 millions d’auditeurs.
     </p>
@@ -29,6 +31,11 @@
           épisodes discriminants
         </span>
       </div>
+    </div>
+    <div class="pt-3 text-center">
+      <a href="{{ get_permalink(FrontPage::methodology()) }}" class="btn btn-primary btn-lg text-uppercase text-heading mb-2">
+        En savoir plus
+      </a>
     </div>
   </div>
 </div>

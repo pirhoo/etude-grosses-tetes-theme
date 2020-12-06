@@ -10,4 +10,8 @@ body {
   *[role=document] {
     flex-grow: 1;
   }
+
+  .text-heading {
+    font-family: $headings-font-family;
+  }
 }
