@@ -8,10 +8,10 @@
 
     &__punchline {
       text-align: right;
+      margin: $spacer-xl 0;
 
       @include media-breakpoint-down('md') {
         text-align: center;
-        margin-top: $spacer-xl;
       }
 
       &__heading {

@@ -65,7 +65,7 @@
         box-shadow: $spacer-xs $spacer-xs 0 0 mix($primary, white);
       }
 
-      @include media-breakpoint-down('sm') {        
+      @include media-breakpoint-down('sm') {
         padding: $spacer 0;
         border: 0;
         background: mix($gray-100, $primary, 95%);
@@ -80,6 +80,15 @@
 
     img {
       height: auto;
+    }
+
+    figcaption {
+      font-size: 0.7em;
+      color: $text-muted;
+      text-align: center;
+      padding: 0 $spacer-sm;
+      margin: 0;
+      display: block;
     }
 
     .alignleft {
@@ -108,7 +117,6 @@
 
     .alignleft, .alignright {
       padding: $spacer;
-      padding-bottom: 0;
       border: 2px solid $primary;
       margin-bottom: $paragraph-margin-bottom;
 
