@@ -19,16 +19,25 @@ class Chapter extends Controller
         if (!Chapter::isChapter() && !Interview::isInterview()) {
           return null;
         }
-        $chapters = Chapter::all();
-        $current_chapter_index = array_search(get_post()->ID, Chapter::ids());
-        if ($current_chapter_index === false) {
-          return $chapters[0];
+        $pages = Chapter::nextPages();
+        $pages_ids = Chapter::nextPagesIds();
+        $current_page_index = array_search(get_post()->ID, $pages_ids);
+        if ($current_page_index === false || $current_page_index >= count($pages) - 1) {
+          return $pages[0];
         }
-        return $chapters[$current_chapter_index + 1];
+        return $pages[$current_page_index + 1];
     }
 
     public function hasNextChapter() {
         return !!Chapter::nextChapter();
+    }
+
+    public function nextPages () {
+      return array_merge(Chapter::all(), Interview::all());
+    }
+
+    public function nextPagesIds () {
+      return array_map('intval', array_column(Chapter::nextPages(), 'ID'));
     }
 
     public function all()

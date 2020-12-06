@@ -2,11 +2,7 @@
   <div class="next-study-chapter">
     <div class="next-study-chapter__container">
       <h3 class="next-study-chapter__container__heading">
-        @if (Chapter::isChapter()) 
-          Suite de l'étude
-        @else
-          Lire l'étude
-        @endif
+        Pour aller plus loin
       </h3>
       <a href="{{ get_permalink(Chapter::nextChapter()) }}" class="next-study-chapter__container__link d-flex">
         <span class="flex-grow-1 d-flex align-items-start">
