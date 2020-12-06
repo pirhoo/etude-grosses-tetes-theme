@@ -146,10 +146,10 @@
                 z-index: 0;
                 position: fixed;
                 top: 0;
-                bottom: 0;
-                background: rgba($primary, 0.7);
                 left: 0;
                 right: 0;
+                height: 100vh;
+                background: rgba($primary, 0.7);
                 display: none;
 
                 @include media-breakpoint-down('md') {
@@ -166,6 +166,10 @@
 
               & > .menu-item {
                 border-bottom: 1px solid mix($primary, #fff);
+
+                a {
+                  background: #fff;
+                }
 
                 a:hover {
                   background: $body-color;
