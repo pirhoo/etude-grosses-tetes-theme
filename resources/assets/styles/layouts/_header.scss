@@ -82,19 +82,19 @@
               font-size: 1rem;
               padding: 0.25rem $spacer-sm;
             }
+          }
 
-            &:hover, &:focus {
-              position: relative;
-              z-index: $zindex-dropdown + 10;
-            }
+          a:hover, &.menu-item-is-open a {
+            position: relative;
+            z-index: $zindex-dropdown + 10;
+          }
 
-            &:hover:not(:focus) {
-              background: mix($primary, #fff, 80%)
-            }
+          &:not(.menu-item-is-open) a:hover {
+            background: mix($primary, #fff, 80%)
+          }
 
-            &:focus {
-              background: $dark;
-            }
+          &.menu-item-is-open a {
+            background: $dark;
           }
 
           &.menu-item-has-children {
@@ -118,9 +118,7 @@
               background-size: contain;
             }
 
-            a:focus ~ .sub-menu,
-            a ~ .sub-menu:focus,
-            a ~ .sub-menu:active {
+            &.menu-item-is-open > .sub-menu {
               opacity: 1;
               pointer-events: all;
               transition: opacity 300ms, max-height 300ms;
