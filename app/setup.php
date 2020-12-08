@@ -50,6 +50,14 @@ add_action('wp_enqueue_scripts', function () {
     }
 }, 100);
 
+
+/**
+ * Ensure Dashicons are loaded
+ */
+add_action( 'wp_enqueue_scripts', function () {
+  wp_enqueue_style( 'dashicons' );
+});
+
 /**
  * Theme setup
  */
