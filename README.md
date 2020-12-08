@@ -1,4 +1,4 @@
-# 🎙 [Etude « Les Grosses Têtes »](https://grossestetes.ajlgbt.info) par l'AJL 
+# 🎙 [Etude « Les Grosses Têtes »](https://grossestetes.ajlgbt.info) par l'AJL
 
 A theme build with [Sage](https://roots.io/sage/), a WordPress starter theme with a modern development workflow.
 
@@ -74,7 +74,7 @@ Edit `app/setup.php` to enable or disable theme features, setup navigation menus
 ### Theme structure
 
 ```shell
-themes/your-theme-name/   # → Root of your Sage based theme
+themes/grosses-tetes/     # → Root of the theme
 ├── app/                  # → Theme PHP
 │   ├── controllers/      # → Controller files
 │   ├── admin.php         # → Theme customizer setup
