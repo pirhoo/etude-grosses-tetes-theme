@@ -12,3 +12,6 @@ deploy-dist: build
 
 deploy-vendor:
 	echo "put -r vendor" | sftp 2829886@sftp.sd5.gpaas.net:/vhosts/next.ajlgbt.info/htdocs/wp-content/themes/etude-grosses-tetes/
+
+webpack:
+	yarn run start
