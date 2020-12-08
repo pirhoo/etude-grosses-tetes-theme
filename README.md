@@ -1,4 +1,4 @@
-# 🎙 [Etude "Les Grosses Têtes"](https://grossestetes.ajlgbt.info) par l'AJL 
+# 🎙 [Etude « Les Grosses Têtes »](https://grossestetes.ajlgbt.info) par l'AJL 
 
 A theme build with [Sage](https://roots.io/sage/), a WordPress starter theme with a modern development workflow.
 
