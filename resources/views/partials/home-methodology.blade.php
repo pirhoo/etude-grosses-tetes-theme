@@ -28,7 +28,7 @@
           <span class="home__methodology__panel__figures__item__display__emoji">😳</span> 366
         </span>
         <span class="home__methodology__panel__figures__item__unit">
-          épisodes discriminants
+          séquences discriminantes
         </span>
       </div>
     </div>
