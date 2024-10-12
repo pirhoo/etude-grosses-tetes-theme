@@ -22,7 +22,7 @@ export default async (app) => {
    *
    * @see {@link https://bud.js.org/reference/bud.setPublicPath}
    */
-  app.setPublicPath('/wp-content/themes/etude-palmade/public/');
+  app.setPublicPath('/wp-content/themes/etude-grosses-tetes/public/');
 
   /**
    * Development server settings
