@@ -4,6 +4,11 @@ build:
 deploy: deploy-git deploy-dist
 
 # @see https://github.com/git-ftp/git-ftp
+deploy-init:
+	git config git-ftp.url "sftp://sftp.sd5.gpaas.net/vhosts/next.ajlgbt.info/htdocs/wp-content/themes/etude-grosses-tetes/"
+	git config git-ftp.user 2829886
+	git ftp init
+
 deploy-git:
 	git ftp push
 
