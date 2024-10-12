@@ -1,4 +1,4 @@
-This theme is based on Sage 6.20.0 with a few alterations:
+This theme is based on Bud 6.20 and Sage 10.8 with a few alterations:
 
 * installation of Acorn in the theme directory (composer.json)
 * removal of every mentions of Tailwind
