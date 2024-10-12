@@ -5,7 +5,7 @@
   <div class="container py-5">
     <div class="mb-5 d-flex">
       <h1 class="m-0 mr-auto">
-        {!! App::title() !!}
+        {!! $app->title() !!}
       </h1>
       {!! get_search_form(false) !!}
     </div>

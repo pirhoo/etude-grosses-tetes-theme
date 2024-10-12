@@ -1,6 +1,6 @@
 <div class="single__header">
     <h1 class="single__header__title">
-      {!! App::title() !!}
+      {!! $app->title() !!}
     </h1>
     @if (is_single() || is_page())
       <div class="single__header__meta d-flex align-items-start">

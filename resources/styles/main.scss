@@ -1,0 +1,25 @@
+@import "./common/variables";
+
+/** Import everything from bootstrap */
+@import "~bootstrap/scss/bootstrap";
+
+/** Import theme styles */
+@import "./common/global";
+@import "./common/content";
+@import "./components/buttons";
+@import "./components/comments";
+@import "./components/forms";
+@import "./components/home-ajl.scss";
+@import "./components/home-chapters.scss";
+@import "./components/home-jumbotron.scss";
+@import "./components/home-methodology.scss";
+@import "./components/home-pr.scss";
+@import "./components/next-study-chapter";
+@import "./components/single-header";
+@import "./components/wp-classes";
+@import "./layouts/header";
+@import "./layouts/sidebar";
+@import "./layouts/footer";
+@import "./layouts/posts";
+@import "./layouts/single";
+@import "./layouts/tinymce";
