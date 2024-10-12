@@ -1,4 +1,5 @@
-import GreenAudioPlayer from '!!raw-loader!@src/vendors/green-audio-player/green-audio-player.min'
+import $ from 'jquery'
+import '@src/vendors/green-audio-player/green-audio-player.min'
 import WaveSurfer from 'wavesurfer.js'
 
 export default {

@@ -3,6 +3,8 @@
 /** Import everything from bootstrap */
 @import "~bootstrap/scss/bootstrap";
 
+@import url('../vendors/green-audio-player/green-audio-player.min.css');
+
 /** Import theme styles */
 @import "./common/global";
 @import "./common/content";

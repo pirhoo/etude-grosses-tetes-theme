@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 export default {
   init() {
     // Disable default event for # links
