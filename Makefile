@@ -1,5 +1,5 @@
 build:
-	yarn run build:production
+	yarn run build
 
 deploy: deploy-git deploy-dist
 
@@ -19,4 +19,4 @@ deploy-vendor:
 	echo "put -r vendor" | sftp 2829886@sftp.sd5.gpaas.net:/vhosts/next.ajlgbt.info/htdocs/wp-content/themes/etude-grosses-tetes/
 
 webpack:
-	yarn run start
+	yarn run dev
